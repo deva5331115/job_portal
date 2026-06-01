@@ -1,11 +1,26 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const path = require('path');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
+   
   });
+
+  // Import Bootstrap CSS
+  app.import('node_modules/jquery/dist/jquery.min.js');
+  
+  app.import('app/styles/css/bootstrap.min.css');
+  app.import('app/styles/lib/animate/animate.min.css');
+  app.import('node_modules/owl.carousel/dist/assets/owl.carousel.min.css');
+  app.import('node_modules/owl.carousel/dist/assets/owl.theme.default.min.css');
+  app.import('node_modules/owl.carousel/dist/owl.carousel.min.js');
+  app.import('node_modules/wowjs/dist/wow.min.js');
+  // Import Bootstrap JS
+  app.import('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js');
+  app.import('node_modules/jquery.nicescroll/dist/jquery.nicescroll.min.js');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.

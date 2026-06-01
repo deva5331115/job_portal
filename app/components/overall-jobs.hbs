@@ -1,0 +1,80 @@
+<div class="overall-dashboard">
+<div class="content-wrapper" style="margin-left: 0px;">
+  <section class="content-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 latest-job margin-top-50 margin-bottom-20">
+          <h1 class="text-center">Latest Jobs</h1>  
+          <div class="input-group input-group-lg">
+            {{input id="searchBar" value=this.searchQuery class="form-control" placeholder="Search job"}}
+            <span class="input-group-btn">
+              <button {{on "click" this.search}} class="btn btn-info btn-flat">Go!</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="candidates" class="content-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="box box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Filters</h3>
+            </div>
+            <div class="box-body no-padding">
+              <ul class="nav nav-pills nav-stacked tree">
+                <li class="treeview menu-open">
+                  <a href="#"><i class="fa fa-plane text-red"></i> City <span class="pull-right"><i class="fa fa-angle-down pull-right"></i></span></a>
+                  <ul class="treeview-menu">
+                    <li><a href="#" {{on "click" (fn this.filterByCity "Delhi")}}><i class="fa fa-circle-o text-yellow"></i> Delhi</a></li>
+                    <li><a href="#" {{on "click" (fn this.filterByCity "Kouba")}}><i class="fa fa-circle-o text-yellow"></i> Kouba</a></li>
+                  </ul>
+                </li>
+                <li class="treeview menu-open">
+                  <a href="#"><i class="fa fa-plane text-red"></i> Experience <span class="pull-right"><i class="fa fa-angle-down pull-right"></i></span></a>
+                  <ul class="treeview-menu">
+                    {{#each (range 1 5) as |year|}}
+                      <li><a href="#" {{on "click" (fn this.filterByExperience year)}}><i class="fa fa-circle-o text-yellow"></i> > {{year}} Years</a></li>
+                    {{/each}}
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div id="target-content">
+            <!-- Jobs will be dynamically loaded here -->
+            {{#if this.isLoading}}
+              <p>Loading...</p>
+            {{else}}
+              {{!-- Loop through the job postings --}}
+              {{#each this.jobs as |job|}}
+                <div class="job-posting">
+                  <h2>{{job.title}}</h2>
+                  <p>{{job.description}}</p>
+                </div>
+              {{/each}}
+            {{/if}}
+          </div>
+          <div class="text-center">
+            {{!-- Pagination --}}
+            <ul class="pagination text-center">
+              {{#each this.pages as |page|}}
+  <li class="{{if (is-equal this.currentPage page) 'active' ''}}">
+    <a href="#" {{on "click" (fn this.loadPage page)}}>{{page}}</a>
+  </li>
+{{/each}}
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</div>
+{{yield}}

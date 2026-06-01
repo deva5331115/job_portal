@@ -1,0 +1,62 @@
+ <div class="editprof" style="display:flex;position:relative box-shadow:10px 10px">
+   
+ <div class="row" style="box-shadow:100px;">
+     <h1>Edit Profile</h1>
+                <div class="col-md-6 latest-job ">
+                  <div class="form-group">
+                     <label for="fname">First Name</label>
+                    <input type="text" class="form-control input-lg" id="fname" name="fname" placeholder="First Name"  required="">
+                  </div>
+                  <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" class="form-control input-lg" id="lname" name="lname" placeholder="Last Name" required="">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control input-lg" id="email" placeholder="Email" >
+                  </div>
+                  <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" class="form-control input-lg" rows="5" placeholder="Address"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control input-lg" id="city" name="city"  placeholder="city">
+                  </div>
+                  <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" class="form-control input-lg" id="state" name="state" placeholder="state">
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-flat btn-success">Update Profile</button>
+                  </div>
+                </div>
+                <div class="col-md-6 latest-job ">
+                  <div class="form-group">
+                    <label for="contactno">Contact Number</label>
+                    <input type="text" class="form-control input-lg" id="contactno" name="contactno" placeholder="Contact Number">
+                  </div>
+                  <div class="form-group">
+                    <label for="qualification">Highest Qualification</label>
+                    <input type="text" class="form-control input-lg" id="qualification" name="qualification" placeholder="Highest Qualification" >
+                  </div>
+                  <div class="form-group">
+                    <label for="stream">Stream</label>
+                    <input type="text" class="form-control input-lg" id="stream" name="stream" placeholder="stream" >
+                  </div>
+                  <div class="form-group">
+                    <label>Skills</label>
+                    <textarea class="form-control input-lg" rows="4" name="skills"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>About Me</label>
+                    <textarea class="form-control input-lg" rows="4" name="aboutme"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>Upload/Change Resume</label>
+                    <input type="file" name="resume" class="btn btn-default">
+                  </div>
+                </div>
+              </div>
+              </div>
+              {{yield}}

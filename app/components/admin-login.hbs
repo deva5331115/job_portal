@@ -1,0 +1,38 @@
+<div class="container-abcd" id="container-abcd">
+    <br>
+<div class="containe" id="containe">
+    <div class="container" id="container">
+	
+	<div class="form-container sign-in-container">
+		<form {{on "submit" this.handleLogin}}>
+			<h1>Admin Login</h1>
+			<div class="social-container">
+				
+			</div>
+			
+			<input id="signinEmail" type="text" placeholder="Email" />
+			<input id="signinPSD" type="password" placeholder="Password" />
+			<a href="#">Forgot your password?</a>
+			<button type="submit" id="signIn" >Login</button>
+			<div id="flash-messages-container" style="background-color: lightgreen;color:aliceblue;padding: inherit;"></div>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+            <div class="overlay-panel overlay-left">
+				
+				
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Welcome Admin!</h1>
+				<p>Welcome back, Admin! Let's get to work.</p>
+			</div>
+			
+	
+    </div>
+    </div>
+</div>
+</div>
+</div>
+
+{{yield}}

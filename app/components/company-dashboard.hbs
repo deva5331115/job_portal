@@ -1,0 +1,79 @@
+ <div class="overlay-jobsidebar">
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="img/profile-img.png" alt="Profile Image" />
+     
+      <h1 style="color:#00B074">&nbsp;&nbsp;JobiFy</h1>
+    </div>
+    <ul class="sidebar-links">
+      <h4>
+        <span>Main Menu</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="" {{on "click" (fn this.handleClick "overall-comp")}}>
+          <span class="material-symbols-outlined" > dashboard </span>Dashboard</a>
+      </li>
+      <li>
+        <a href="" {{on "click" (fn this.handleClick "company-overview")}}><span class="material-symbols-outlined" > overview </span>Overview</a>
+      </li>
+       <li>
+        <a href="" {{on "click" (fn this.handleClick "mycompany-details")}}><span class="material-symbols-outlined"> work_update </span>my Company</a>
+      </li>
+       <li>
+        <a href="" {{on "click" (fn this.handleClick "create-jobpost")}}><span class="material-symbols-outlined"> group_add </span>Create Job Posts</a>
+      </li>
+       <li>
+        <a href="" {{on "click" (fn this.handleClick "my-jobpost")}}><span class="material-symbols-outlined"> inventory_2 </span>my JobPost</a>
+      </li>
+       <li>
+        <a href="" {{on "click" (fn this.handleClick "resume-database")}}><span class="material-symbols-outlined"> group </span>Resume Database</a>
+      </li>
+      
+      <h4>
+        <span>General</span>
+        <div class="menu-separator"></div>
+      </h4>
+     <li>
+        <a href="" {{on "click" (fn this.handleClick "chat-comp")}}><span class="material-symbols-outlined {{selected-nav this.currentRoute 'chat'}}" > chat </span>chat</a>
+      </li>
+       <li>
+        <a href="" {{on "click" (fn this.handleClick "calls-comp")}}><span class="material-symbols-outlined"> call </span>calls</a>
+      </li>
+
+      <li>
+        <a href=""><span class="material-symbols-outlined"> groups </span>Groups</a>
+      </li>
+      
+   
+      <li>
+        <a href="" {{on "click" (fn this.handleClick "company-notification")}}><span class="material-symbols-outlined">
+            notifications_active </span>Notifications</a>
+      </li>
+      <h4>
+        <span>Account</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="" {{on "click" (fn this.handleClick "edit-profile-comp")}}><span class="material-symbols-outlined" > account_circle </span>Profile</a>
+      </li>
+      <li>
+        <a href="" {{on "click" (fn this.handleClick "settings-comp")}}><span class="material-symbols-outlined"> settings </span>Settings</a>
+      </li>
+      <li>
+        <a href="" {{on "click" (fn this.signout "home")}}><span class="material-symbols-outlined"> logout </span>Logout</a>
+      </li>
+    </ul>
+    <div class="user-account">
+      <div class="user-profile">
+        <img src="img/devarasan.jpg" alt="Profile Image" />
+        <div class="user-detail">
+          <h3>Devarasan C</h3>
+          <span>Web Developer</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+</body>
+</div>

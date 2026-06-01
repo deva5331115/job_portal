@@ -1,0 +1,40 @@
+<div class="manage-jobss">
+
+  <AdmSidebar></AdmSidebar>
+  <div class="manage-jobs">
+     <h1>Job Management System</h1>
+  
+
+    <form {{on "submit" this.addJob}}>
+      <input type="text" placeholder="Job Name" value={{this.jobName}} oninput={{action (mut this.jobName) value="target.value"}} required>
+      <input type="text" placeholder="Company Name" value={{this.companyName}} oninput={{action (mut this.companyName) value="target.value"}} required>
+      <input type="date" value={{this.dateCreated}} oninput={{action (mut this.dateCreated) value="target.value"}} required>
+      <button type="submit" class="button">Add Job</button>
+    </form>
+
+    <table id="jobTable">
+      <thead>
+        <tr>
+          <th>Job Name</th>
+          <th>Company Name</th>
+          <th>Date Created</th>
+          <th>View</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each this.jobs as |job index|}}
+          <tr>
+            <td>{{job.jobName}}</td>
+            <td>{{job.companyName}}</td>
+            <td>{{job.dateCreated}}</td>
+            <td><button class="button" {{on "click" (fn this.viewJob job.jobName)}}>View</button></td>
+            <td><button class="button cancel" {{on "click" (fn this.removeJob index)}}>Delete</button></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{{outlet}}

@@ -1,0 +1,42 @@
+<div class="adm-ds" >
+<AdmSidebar></AdmSidebar>
+<div class="content">
+    <div class="header">
+        <h2 style="color: aliceblue;">Welcome, Admin</h2>
+    </div>
+
+   <div class="job-statistics-container">
+  <div class="job-statistics-card">
+    <h3>Job Statistics</h3>
+    <ul>
+   <li>Total Jobs Posted: 150</li>
+    <li>Total Applications Received: 300</li>
+    <li>Active Job Listings: 75</li>
+    </ul>
+  </div>
+  <div class="chart-container" {{did-insert this.initializeChart}}>
+    <h2>Job Statistics</h2>
+    <canvas id="jobStatisticsChart"></canvas>
+  </div>
+</div>
+    
+    <div class="card">
+        <h3>Recent Job Posts</h3>
+        <ul>
+            <li>Software Engineer - Google</li>
+            <li>Data Analyst - Facebook</li>
+            <li>Product Manager - Amazon</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Recent User Registrations</h3>
+        <ul>
+            <li>John Doe - johndoe@example.com</li>
+            <li>Jane Smith - janesmith@example.com</li>
+            <li>Mike Johnson - mikejohnson@example.com</li>
+        </ul>
+    </div>
+</div>
+</div>
+{{outlet}}

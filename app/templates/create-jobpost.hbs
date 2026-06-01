@@ -1,0 +1,31 @@
+<div class="create-jobs" >
+<NavBar></NavBar>
+<div class="container-xxl bg-white p-0 "  >
+
+<CompanyDashboard></CompanyDashboard>
+
+   
+    <h1>Create Job Post</h1>
+    
+    <form action="" method="post">
+        <label for="job-title">Job Title:</label>
+        <input type="text" id="job-title" name="job-title" required>
+        
+        <label for="job-description">Job Description:</label>
+        <textarea id="job-description" name="job-description" rows="4" required></textarea>
+        
+        <label for="job-requirements">Job Requirements:</label>
+        <textarea id="job-requirements" name="job-requirements" rows="4" required></textarea>
+        
+        <label for="salary">Salary (optional):</label>
+        <input type="text" id="salary" name="salary">
+        
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+        
+        <input type="submit" value="Create Job Post">
+    </form>
+<Footer></Footer>
+</div>
+ </div>
+{{outlet}}

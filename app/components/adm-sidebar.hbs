@@ -1,0 +1,11 @@
+<div class="sidebar">
+    <h2 style="color: aliceblue;">Admin Panel</h2>
+    <a href="" {{on "click" (fn this.handleClick "admin-dashboard")}} class="dropdown-item {{selected-nav this.currentRoute 'job-list'}}">Dashboard</a>
+    <a href="" {{on "click" (fn this.handleClick "job-manage") }} class="dropdown-item {{selected-nav this.currentRoute 'job-manage'}}">Manage Jobs</a>
+    <a href=""{{on "click" (fn this.handleClick "user-manage")}} class="dropdown-item {{selected-nav this.currentRoute 'user-manage'}}">Manage Users</a>
+    <a href="" {{on "click" (fn this.handleClick "job-app")}} class="dropdown-item {{selected-nav this.currentRoute 'job-app'}}">Applications</a>
+    <a href="">Reports</a>
+    <a href="">Settings</a>
+    <a href="" {{on "click" (fn this.handleClick "home")}} >Logout</a>
+  </div>
+{{yield}}

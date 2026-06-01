@@ -1,0 +1,42 @@
+<div class="manage-jobss">
+
+  <AdmSidebar></AdmSidebar>
+ 
+  <div class="manage-jobs">
+     <h1>User Management System</h1>
+
+            <form>
+                <input type="text" placeholder="User Name" required>
+                <input type="email" placeholder="User Email" required>
+                <button type="submit" class="button">Add User</button>
+            </form>
+
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>User Name</th>
+                        <th>User Email</th>
+                        <th>View</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample Data -->
+                    <tr>
+                        <td>John Doe</td>
+                        <td>john.doe@example.com</td>
+                        <td><button class="button" onclick="viewUser('John Doe')">View</button></td>
+                        <td><button class="button cancel" onclick="removeUser(this)">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>jane.smith@example.com</td>
+                        <td><button class="button" onclick="viewUser('Jane Smith')">View</button></td>
+                        <td><button class="button cancel" onclick="removeUser(this)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</div>
+
+{{outlet}}

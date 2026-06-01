@@ -1,0 +1,52 @@
+<div class="manage-jobss">
+
+  <AdmSidebar></AdmSidebar>
+ 
+  <div class="manage-jobs">
+     <h1>Candidate Management System</h1>
+
+            <form>
+                <input type="text" placeholder="Candidate Name" required>
+                <input type="text" placeholder="Highest Qualification" required>
+                <input type="text" placeholder="Skills" required>
+                <input type="text" placeholder="City" required>
+                <input type="text" placeholder="State" required>
+                <input type="file" required>
+                <button type="submit" class="button">Add Candidate</button>
+            </form>
+
+    <table id="candidateTable">
+                <thead>
+                    <tr>
+                        <th>Candidate</th>
+                        <th>Highest Qualification</th>
+                        <th>Skills</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Download Resume</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample Data -->
+                    <tr>
+                        <td>John Doe</td>
+                        <td>M.Sc. Computer Science</td>
+                        <td>Java, Python, SQL</td>
+                        <td>New York</td>
+                        <td>NY</td>
+                        <td><button class="button" onclick="downloadResume('john_doe_resume.pdf')">Download</button></td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>B.Sc. Information Technology</td>
+                        <td>JavaScript, HTML, CSS</td>
+                        <td>Los Angeles</td>
+                        <td>CA</td>
+                        <td><button class="button" onclick="downloadResume('jane_smith_resume.pdf')">Download</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</div>
+
+{{outlet}}
